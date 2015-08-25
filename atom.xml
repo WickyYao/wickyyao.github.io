@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[My Octopress Blog]]></title>
+  <link href="http://blog.wickyyao.com/atom.xml" rel="self"/>
+  <link href="http://blog.wickyyao.com/"/>
+  <updated>2015-08-25T15:40:36+08:00</updated>
+  <id>http://blog.wickyyao.com/</id>
+  <author>
+    <name><![CDATA[Wicky]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Hello Octopress]]></title>
+    <link href="http://blog.wickyyao.com/blog/2015/08/25/hello-octopress/"/>
+    <updated>2015-08-25T12:48:28+08:00</updated>
+    <id>http://blog.wickyyao.com/blog/2015/08/25/hello-octopress</id>
+    <content type="html"><![CDATA[<p>其实很早之前我就想写一个自己的博客来记录我看到或学到的点点滴滴，可患有晚期懒癌的我迟迟都没有行动起来。是时候迈出第一步了，相信任何事情开头总是最难的，之后也便是顺水推舟的事情了。</p>
+
+<p>之前使用过<a href="https://www.blogger.com">Blogspot</a>，但是被GFW墙了，还是决定自己搭建一个比较方便，恰好在网上看到<a href="http://octopress.org/">Octopress</a>，感觉一下子就被它多简洁吸引住了，Octopress是基于Jellyll的静态页面博客，使用Markdown来生成页面也省了很多排版的琐事。</p>
+
+<p>接下来讲一下基本步骤</p>
+
+<h3>创建</h3>
+
+<p>首先你必须要安装了<a href="http://git-scm.com/">Git</a><br/>
+其次，如果没有rbenv的话也需要安装，这是在osx下安装的命令</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>brew update
+</span><span class='line'>brew install rbenv
+</span><span class='line'>brew install ruby-build</span></code></pre></td></tr></table></div></figure>
+
+
+<p>
+然后照以下步骤初始创建博客</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git clone git://github.com/imathis/octopress.git octopress
+</span><span class='line'>cd octopress
+</span><span class='line'>gem install bundler
+</span><span class='line'>rbenv rehash
+</span><span class='line'>bundle install
+</span><span class='line'>rake install # 安装Octopress默认主题</span></code></pre></td></tr></table></div></figure>
+
+
+<p>
+值得注意的是由于访问<a href="https://rubygems.org">https://rubygems.org</a> 不稳定，如果在运行bundle install出现资源获取问题时，建议把Gemfile的source指向 <a href="http://ruby.taobao.org">http://ruby.taobao.org</a> 的镜像就可以解决问题了</p>
+
+<h3>发布</h3>
+
+<p>这一步就是把刚刚建立的博客发布到Github Pages上<br/>
+首先你要在Github上创建一个repo，命名规则是<code>username.github.io</code><br/>
+接着就可以运行<code>rake setup_github_pages</code>，它会帮你设置好一切配置  <br/>
+<code>rake generate</code>会把生成的静态博客拷贝到<code>_deploy/</code>里<br/>
+<code>rake preview</code>可在本地4000端口下预览<br/>
+<code>rake deploy</code>会把<code>_deploy/</code>里的内容push到master分支里，发布成功！<br/>
+<strong>但是</strong>最后别忘了commit你的source code</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git add .
+</span><span class='line'>git commit -m 'your message'
+</span><span class='line'>git push origin source</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>基本操作</h3>
+
+<p>这里大致写一下博客的一些基本操作命令</p>
+
+<h5>新建文章</h5>
+
+<p><code>rake new_post["title"]</code>可以新建一篇文章存于<code>source/_posts</code>文件夹下，文章的命名格式为<code>YYYY-MM-DD-post-title.markdown</code>，其中日期能帮助博客文章的排序</p>
+
+<h5>新建板块</h5>
+
+<p><code>rake new_page[super-awesome]</code>会为你在导航栏创建一个新的板块</p>
+
+<p>那基本就介绍到这里了 希望能有所帮助</p>
+]]></content>
+  </entry>
+  
+</feed>
