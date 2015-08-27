@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>My Octopress Blog</title>
+  <title>HTDP(1) - Brief Introduction to HTDP - My Octopress Blog</title>
   <meta name="author" content="Wicky">
 
   
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://blog.wickyyao.com">
+  <link rel="canonical" href="http://blog.wickyyao.com/blog/2015/08/27/htdp-1-brief-introduction-to-htdp">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="My Octopress Blog" type="application/atom+xml">
@@ -63,15 +63,12 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2015/08/27/htdp-1-brief-introduction-to-htdp/">HTDP(1) - Brief Introduction to HTDP</a></h1>
+      <h1 class="entry-title">HTDP(1) - Brief Introduction to HTDP</h1>
     
     
       <p class="meta">
@@ -87,7 +84,7 @@
   </header>
 
 
-  <div class="entry-content"><p>很早就想读读被捧为圣经的<a href="https://mitpress.mit.edu/sicp/">SICP</a>，看了部分评论大多数都说不是太好理解，表示看了几遍还是云里雾里的。那我就果断退而求其次决定先阅读一遍<a href="http://www.htdp.org/">HTDP</a>，它比SICP更为基础，step by step 的讲解方式也更能让人清楚的理解含义，并且全文配合讲解的语言和SICP一样也是Scheme，看完这本之后再看SICP应该能更为顺利和透彻。</p>
+<div class="entry-content"><p>很早就想读读被捧为圣经的<a href="https://mitpress.mit.edu/sicp/">SICP</a>，看了部分评论大多数都说不是太好理解，表示看了几遍还是云里雾里的。那我就果断退而求其次决定先阅读一遍<a href="http://www.htdp.org/">HTDP</a>，它比SICP更为基础，step by step 的讲解方式也更能让人清楚的理解含义，并且全文配合讲解的语言和SICP一样也是Scheme，看完这本之后再看SICP应该能更为顺利和透彻。</p>
 
 <p>那先大概讲一下HTDP这本书会讲解些什么吧</p>
 
@@ -158,116 +155,50 @@
 
 <p>好了，大概也介绍的差不多了，让我们赶紧开启这次旅程吧！</p>
 </div>
-  
-  
 
 
-    </article>
-  
-  
-    <article>
+  <footer>
+    <p class="meta">
       
-  <header>
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Wicky</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2015-08-27T19:32:37+08:00'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>27</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>7:32 pm</span></time>
+      
+
+
+    </p>
     
-      <h1 class="entry-title"><a href="/blog/2015/08/25/hello-octopress/">Hello Octopress</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2015-08-25T12:48:28+08:00'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>25</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>12:48 pm</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>其实很早之前我就想写一个自己的博客来记录我看到或学到的点点滴滴，可患有晚期懒癌的我迟迟都没有行动起来。是时候迈出第一步了，相信任何事情开头总是最难的，之后也便是顺水推舟的事情了。</p>
-
-<p>之前使用过<a href="https://www.blogger.com">Blogspot</a>，但是被GFW墙了，还是决定自己搭建一个比较方便，恰好在网上看到<a href="http://octopress.org/">Octopress</a>，感觉一下子就被它多简洁吸引住了，Octopress是基于Jellyll的静态页面博客，使用Markdown来生成页面也省了很多排版的琐事。</p>
-
-<p>接下来讲一下基本步骤</p>
-
-<h3>创建</h3>
-
-<p>首先你必须要安装了<a href="http://git-scm.com/">Git</a><br/>
-其次，如果没有rbenv的话也需要安装，这是在osx下安装的命令</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>brew update
-</span><span class='line'>brew install rbenv
-</span><span class='line'>brew install ruby-build</span></code></pre></td></tr></table></div></figure>
-
-
-<p>
-然后照以下步骤初始创建博客</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>git clone git://github.com/imathis/octopress.git octopress
-</span><span class='line'>cd octopress
-</span><span class='line'>gem install bundler
-</span><span class='line'>rbenv rehash
-</span><span class='line'>bundle install
-</span><span class='line'>rake install # 安装Octopress默认主题</span></code></pre></td></tr></table></div></figure>
-
-
-<p>
-值得注意的是由于访问<a href="https://rubygems.org">https://rubygems.org</a> 不稳定，如果在运行bundle install出现资源获取问题时，建议把Gemfile的source指向 <a href="http://ruby.taobao.org">http://ruby.taobao.org</a> 的镜像就可以解决问题了</p>
-
-<h3>发布</h3>
-
-<p>这一步就是把刚刚建立的博客发布到Github Pages上<br/>
-首先你要在Github上创建一个repo，命名规则是<code>username.github.io</code><br/>
-接着就可以运行<code>rake setup_github_pages</code>，它会帮你设置好一切配置  <br/>
-<code>rake generate</code>会把生成的静态博客拷贝到<code>_deploy/</code>里<br/>
-<code>rake preview</code>可在本地4000端口下预览<br/>
-<code>rake deploy</code>会把<code>_deploy/</code>里的内容push到master分支里，发布成功！<br/>
-<strong>但是</strong>最后别忘了commit你的source code</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>git add .
-</span><span class='line'>git commit -m 'your message'
-</span><span class='line'>git push origin source</span></code></pre></td></tr></table></div></figure>
-
-
-<h3>基本操作</h3>
-
-<p>这里大致写一下博客的一些基本操作命令</p>
-
-<h5>新建文章</h5>
-
-<p><code>rake new_post["title"]</code>可以新建一篇文章存于<code>source/_posts</code>文件夹下，文章的命名格式为<code>YYYY-MM-DD-post-title.markdown</code>，其中日期能帮助博客文章的排序</p>
-
-<h5>新建板块</h5>
-
-<p><code>rake new_page[super-awesome]</code>会为你在导航栏创建一个新的板块</p>
-
-<p>那基本就介绍到这里了 希望能有所帮助</p>
+      <div class="sharing">
+  
+  
+  
 </div>
-  
-  
 
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2015/08/25/hello-octopress/" title="Previous Post: Hello Octopress">&laquo; Hello Octopress</a>
+      
+      
+    </p>
+  </footer>
+</article>
 
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
+  </section>
+
+</div>
+
 <aside class="sidebar">
   
     <section>
@@ -292,6 +223,7 @@
   
 </aside>
 
+
     </div>
   </div>
   <footer role="contentinfo"><p>
@@ -306,7 +238,10 @@
       var disqus_shortname = 'wickyyao';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://blog.wickyyao.com/blog/2015/08/27/htdp-1-brief-introduction-to-htdp/';
+        var disqus_url = 'http://blog.wickyyao.com/blog/2015/08/27/htdp-1-brief-introduction-to-htdp/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
